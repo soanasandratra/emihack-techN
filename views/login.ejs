@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- farmeworks -->
+    <link rel="stylesheet" href="css/font_awesome_edit/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/loginform.css">
+    <link rel="stylesheet" href="css/root.css">
+
+    <!-- js -->
+    <script src="js/login.js" defer></script>
+
+    <title>Login</title>
+</head>
+<body>
+    <form action="/" method="post" name="formConnexion" class="login">
+        <h2>LOG IN</h2>
+        <span><label for="id">Identifiant</label></span><br>
+        <input type="text" id="id" name="pseudo" class="input"><br><br><br>
+        <span><label for="mdp">Mot de passe</label></span><br>
+        <div class="input">
+            <input type="password" id="mdp" name="password"> <i class="fa-regular fa-eye" onclick="blink()" id="oeil"></i>
+        </div> 
+        <span class="commentaire"></span>
+        <div>
+            <button type="submit" onclick="return estVide()">
+                Se connecter
+            </button> 
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font_awesome_edit/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/liste.css">
+
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+
+    <!-- js -->
+    <script src="js/app.js" defer></script>
+
+    <title>Index2</title>
+    <link rel="icon" type="image/ico" href="img/wine_logo-removebg-preview.ico"/>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <div class="row">
+                <div class="col-2 logo">
+                    <img src="img/wine_logo-removebg-preview.png" alt="">
+                </div>
+                <div class="col-8 pt-3 text-center">
+                    <a href="#" class="active activemenu"><span class="fa fa-home"></span>
+                        <span class="ms-2">Acceuil</span>
+                    </a>
+                    <a href="#" class="active "><span class="fa fa-hdd-o"></span>
+                        <span class="ms-2">Stock</span>
+                    </a>
+                    <a href="#commande" class="active"><span class="fa fa-shopping-cart"></span>
+                        <span class="ms-2">Commande</span>
+                    </a>
+                </div>
+                <div class="col-1">
+                    <div class="text-center navicon" title="Rapport" onclick="popup2()">
+                        <button class="btn"><i class="fa fa-list-alt" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="user-wrapper text-center imgprofil">
+                         <img src="img/3d-rendent-paysage-extraterrestre-fantastique-lune-nuit.jpg" width="40px" height="40px" alt="">
+                
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <section id="rapport-container">
+        <div class="img">
+            <img src="img/rapport.png" alt="">
+        </div>
+        <form action="/rapport" method="post" class="rapport">
+            <h3>Rapport de vente mensuel</h3>
+            <div>
+                <%for(vin of vins) {%>
+                    <div>
+                        <label for="nombre"><%= vin.nom_vin%></label> <input type="int" name="<%=vin.nom_vin%>"><br><br>
+                    </div>
+                <%}%>
+            </div>
+            <button type="submit">Soumettre</button>
+        </form>
+        <i class="fa-solid fa-xmark" onclick="popup2()"></i>
+    </section>
+
+    <div class="profiluser">
+        <script>
+            const styleSwitcherToggle = document.querySelector(".user-wrapper");
+            styleSwitcherToggle.addEventListener("click", () => {
+                document.querySelector(".profiluser").classList.toggle("open");
+            })
+        </script>
+        <div class="img2">
+            <img src="img/3d-rendent-paysage-extraterrestre-fantastique-lune-nuit.jpg" alt="">
+        </div>
+        <div class="text-center mt-4">
+            <h5>Nom du Poste</h5>
+            <h6>Lieux</h6>
+        </div>
+    </div>
+
+
+
+    <section class="container listContainer">
+            <div>
+                <h4>Liste de nos vins</h4>
+                <div class="text-center">
+                    <span class=" search">
+                        <i class="fa fa-search"></i>
+                        <input type="search">
+                    </span>
+                </div>
+
+                <section class="card-container">
+                    <%for(vin of vins) {%>
+                        <div class="card">
+                            <div class="image">
+                                <img src="image/"+<%=vin.nom_vin%>+".jpg" alt="">
+                            </div>
+                            <div class="label">
+                                <h5><%=vin.nom_vin%></h5>
+                                <p>nombre de stock : <%=vin.nb_stock%></p>
+                            </div>
+                        </div>
+                    <%}%>
+                </section>
+            </div>
+    </section>
+
+        <section class="container listContainer" id="commande">
+            <div>
+                <h4> Commande</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="containercard">
+                            <img src="img/—Pngtree—wine glass grapes photography illustration_6490322.png" alt="">
+                            <div class="text-center">
+                                <h5>Nom du vin</h5>
+                                <span>n</span>
+                            </div>
+                            <input type="int"><br><br>
+                            <button type="submit">Soumettre</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+</body>
+</html>

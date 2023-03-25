@@ -1,0 +1,105 @@
+.listContainer{
+    margin-top: 200px;
+}
+
+.listContainer h4{
+    margin-left: 40px;
+    position: relative;
+}
+
+.listContainer h4::before{
+    content: "";
+    background-color: var(--vin1);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 10%;
+    height: 2px;
+}
+.listContainer h4::after{
+    content: "";
+    background-color: var(--vin1);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 3%;
+    height: 2px;
+}
+
+.card-container{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+.card{
+    width: 250px;
+    height: 300px;
+    text-align: center;
+}
+.image{
+    height: 70%;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.label{
+    font-family: sans-serif;
+}
+h4{
+    font-family: 'Dancing Script', cursive;
+}
+span{
+    display: inline-block;
+}
+.search{
+    margin: 30px;
+    height: 30px;
+}
+.search input, .search i{
+    height: 100%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.search input{
+    padding-left: 10px;
+}
+
+.containercard{
+    border-radius: 20px;
+    background-color: rgb(196, 188, 188);
+    width: 250px;
+    height: 350px;
+    position: relative;
+    margin: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    text-align: center;
+}
+
+.containercard img{
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+    display: block;
+    margin: auto;
+}
+
+.containercard input{
+    width: 60px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 3px;
+}
+
+.addstack .btnadd{
+   position: relative;
+}

@@ -1,0 +1,117 @@
+body{
+    background: var(--fond);
+}
+.formcontainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+form{
+    width: max-content;
+    margin: auto;
+    background-image: url(../img/v915-techi-056.jpg);
+    background-size: cover;
+    height: 60vh;
+    position:fixed ;
+    padding: 50px;
+    line-height: 25px;
+}
+.login{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#inscription{
+    height: 70vh;
+    display: none;
+}
+#inscription.active{
+    display: block;
+}
+form span{
+    font-size: medium;
+    margin-left: 10px;
+}
+.commentaire{
+    font-family: serif;
+    color: red;
+}
+.input{
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    font-size: large;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: relative;
+    background: var(--vin3);
+    display: flex;
+}
+.input input, form input{
+    padding-left: 10px;
+    border-radius: 20px;
+    width: 100%;
+    background: var(--vin3);
+    border: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+form div{
+    text-align: center;
+}
+form h2{
+    letter-spacing: 7px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+form button {
+    margin-top: 80px;
+    padding: 10px;
+    font-size: large;
+    width: max-content;
+    cursor: pointer;
+    border: 0px;
+    position: relative;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background: linear-gradient(to right, #D90416, white);
+}
+button:hover{
+    background: linear-gradient(to left, #D90416, white);
+}
+#oeil{
+    translate: 10px;
+    transform: translateY(7px);
+    position: fixed;
+    -webkit-transform: translateY(7px);
+    -moz-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    -o-transform: translateY(7px);
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    z-index: 1;
+}
+.fa-xmark{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: larger;
+}
